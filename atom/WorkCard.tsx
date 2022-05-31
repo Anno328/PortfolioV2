@@ -8,11 +8,11 @@ import Image from 'next/image';
       alt='logo'       
       width={150}
       height={150}/>
-    <div className='inline-block'>
+    <div className='inline-block text-center'>
       <p className='text-base'>{props.title}</p>
       <p className='text-sm my-8'>{props.description}</p>
       {props.link ? 
-      <a className='text-sm my-8 inline-block md:text-xs' target="_blank" href={props.link}>{props.link}</a>:<></>
+      <a className='text-sm my-4 block md:text-xs' target="_blank" href={props.link}>{props.link}</a>:<></>
       }
     </div>
   </div>

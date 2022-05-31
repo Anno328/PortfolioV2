@@ -20,7 +20,14 @@ function AboutMe(){
             alt='logo'       
             width={250}
             height={250}/>
-          <div className='text-center'>
+            <div className='text-center'>
+              <ThemeProvider theme={theme}>
+                <a  target="_blank" href="">
+                  <Button color="primary" variant="outlined" endIcon={<ContactsIcon />}>resume</Button>
+                </a>
+              </ThemeProvider>
+            </div>
+          <div className='text-left'>
             <span className='text-xl md:text-base'>Name:</span><span className='text-xl md:text-base' >AnnoRyoya</span><br />
             <span className='text-xl md:text-base'>Age :</span><span className='text-xl md:text-base' >24</span><br /><br />
             <span className='text-xl md:text-base'>Profile:</span><br />
@@ -30,23 +37,22 @@ function AboutMe(){
             alt='logo'       
             width={300}
             height={500}/> */}
-            <div className='text-center'>
-              <ThemeProvider theme={theme}>
-                <a  target="_blank" href="">
-                  <Button color="primary" variant="outlined" endIcon={<ContactsIcon />}>resume</Button>
-                </a>
-              </ThemeProvider>
-            </div>
           </div>
-        <p className='text-xl mt-10 md:text-sm'>Offline:</p>
         <div className='text-left'>
+          <p className='text-xl mt-10 md:text-sm'>Vison:</p>
+          <p className='text-base md:text-sm'>I want to be Full Stack Engineer!!</p>
+          <p className='text-base md:text-sm'>I would like to offer a personalized website!!</p>
+        </div>
+
+        <div className='text-left'>
+          <p className='text-xl mt-10 md:text-sm'>Offline:</p>
           <p className='text-base md:text-sm'>I drink cofee a lot.</p>
           <p className='text-base md:text-sm'>I like to wear old clothes.</p>
           <p className='text-base md:text-sm'>I like to watch movies.</p>
           <p className='text-base md:text-sm'>I like to read SF books.</p>
           <p className='text-base md:text-sm'>I love cat.</p>
           <p className='text-base md:text-sm'>I like basketball.</p>
-          <p className='text-base md:text-sm'>I like to taking photoes.</p><br />
+          <p className='text-base md:text-sm'>I like to taking photos.</p><br />
           <p className='text-base md:text-sm'>You can see my offline from my Instagram!!</p><br />
         </div>
       </div>

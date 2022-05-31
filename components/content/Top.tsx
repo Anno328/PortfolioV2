@@ -8,8 +8,8 @@ function Top(){
             alt='logo'       
             width={400}
             height={400}/>
-          <p>Hello,I&apos;'m AnnoRyoya.</p>
-          <p>I&apos;'m a Web Developer!</p>
+          <p>Hello,I'm AnnoRyoya.</p>
+          <p>I'm a Web Developer!</p>
       </div>
     )
   }

@@ -14,7 +14,6 @@ import Contact from './content/Contact';
 
 const Content = (props:any) => {
   const {content,show,setShow} = useContext(AppContext)
-
   
   useEffect(() => {
     const contentElement = document.querySelector("#content");
@@ -27,9 +26,9 @@ const Content = (props:any) => {
         <CSSTransition
         in={show}
         timeout={300}
-        classNames="alert"
+        classNames='alert'
         >
-          <div className='alert'>
+          <div>
             {content == 'initial' && 
               <div>
                 <ContentTitle contentTitle='Welcome To My Portfolio!'/>
