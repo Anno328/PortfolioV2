@@ -10,7 +10,7 @@ const TopicCard = (props:any) => {
                 width={150}
                 height={150}/>
         </div>
-        <p id={props.topicTitle} className='font-black text-xl  md:text-sm'>{props.topicTitle}</p>
+        <p id={props.topicTitle} className='font-black text-xl md:text-xs'>{props.topicTitle}</p>
     </button>
   )
 }

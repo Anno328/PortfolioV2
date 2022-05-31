@@ -22,7 +22,7 @@ const Content = (props:any) => {
   });
 
   return (
-      <div id='content' className='bg-green-100 h-screen w-3/5 float-right text-center text-2xl px-32 overflow-auto md:w-2/3 md:text-base md:px-8'>
+      <div id='content' className='bg-green-100 h-screen w-3/5 float-right text-center text-2xl px-32 overflow-auto md:w-2/3 md:text-base md:px-6'>
         <CSSTransition
         in={show}
         timeout={300}
