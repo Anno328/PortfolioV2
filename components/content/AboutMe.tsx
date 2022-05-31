@@ -22,7 +22,7 @@ function AboutMe(){
             height={250}/>
             <div className='text-center mb-8'>
               <ThemeProvider theme={theme}>
-                <a  target="_blank" href="">
+                <a  target="_blank" href="https://github.com/Anno328/Resume/blob/master/Resume.md">
                   <Button color="primary" variant="outlined" endIcon={<ContactsIcon />}>resume</Button>
                 </a>
               </ThemeProvider>
