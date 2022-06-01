@@ -21,7 +21,7 @@ const Profile = () => {
               height={200}/>
         </div>
         <p className='font-black text-2xl mt-4 md:text-sm'>AnnoRyoya</p> <br /> 
-        <span className='mx-1'><SocialIcon style={{ height: 25, width: 25 }} url="https://www.linkedin.com/in/%E7%A8%9C%E7%9F%A2-%E5%AE%89%E9%87%8E-654694221/" /></span>
+        <span className='mx-1'><SocialIcon style={{ height: 25, width: 25 }} url="https://www.linkedin.com/in/Anno-Ryoya/" /></span>
         <span className='mx-1'><SocialIcon style={{ height: 25, width: 25 }} url="https://github.com/Anno328" /></span>
         <span className='mx-1'><SocialIcon style={{ height: 25, width: 25 }} url="https://www.instagram.com/annoske03/"/></span>
 
