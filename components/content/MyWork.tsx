@@ -56,6 +56,14 @@ function MyWork(){
         imgUrl='/y0547.png'
         />
 
+        <p className='text-xl mt-10'>OSS:</p>
+        <WorkCard 
+        title='Buy me a cofee.(In Progress!!)'
+        description='BuyMeACofee!ボタンを手軽に導入するためのパッケージ。Stripeにリダイレクトさせて決済まで行う。'
+        link='https://github.com/Anno328/buy-me-a-cofee'
+        imgUrl='/y0357.png'
+        />
+
         <p className='text-xl mt-10'>Writing:</p>
         <WorkCard 
         title='Qiita'
