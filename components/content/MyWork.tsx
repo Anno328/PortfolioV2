@@ -48,6 +48,7 @@ function MyWork(){
         title='WatchNow(In Progress!!)'
         description='上映時間とジャンルだけで、映画を検索するサービス。サブスクリプションのリンクも表示し、検索結果から即視聴できる。Next.jsでのWebページ開発を実施中。'
         imgUrl='/y0961.png'
+        link='https://watch-now.vercel.app/'
         />
         <WorkCard 
         title='SayCheese!(In Progress!!)'
