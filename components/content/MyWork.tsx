@@ -36,6 +36,11 @@ function MyWork(){
         description='ログインに顔認証を用いたフリーアドレス座席管理サービス。企画から、使用技術の選定・開発・運用まで担当。'
         imgUrl='/y0451.png'
         />
+        <WorkCard 
+        title='Azure PaaS サポートエンジニア'
+        description='Azure PaaS サポートエンジニアとしてAzure App Servise の領域を担当。 App Service の領域において、お客様より承る「このようなエラーが発生した」「こういった動作をしてほしいが実現可能か」かといったご質問についてサポートエンジニアとしてサポートを提供していた。 サポートではお客様の理解度に合わせて図表で示す、公開情報をご案内するといったお客様目線での対応を心がけており、クラウド（Azure）の技術的な知見に加えて、お客様とのコミュニケーションを含むソフトスキルを身につけた。        '
+        imgUrl='/1384.png'
+        />
 
         <p className='text-xl mt-10'>Private Projects:</p>
         <WorkCard 

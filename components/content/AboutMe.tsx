@@ -31,7 +31,7 @@ function AboutMe(){
             <span className='text-xl md:text-base'>Name:</span><span className='text-xl md:text-base' >AnnoRyoya</span><br />
             <span className='text-xl md:text-base'>Age :</span><span className='text-xl md:text-base' >25</span><br /><br />
             <span className='text-xl md:text-base'>Profile:</span><br />
-            <span className='text-base md:text-xs'>Webアプリケーションエンジニアを3年経験し、複数のBtoB,BtoCのWebアプリを構築した。その中で、フロントエンド（React）～バックエンド（Express）の設計・開発、クラウド(Azure)の構築ノウハウを身に着けた。また、CICD(AzureDevOps Pipeline)の整備を通して、資産品質の担保や開発プロセスの効率化に貢献した。</span><br /><br />
+            <span className='text-base md:text-xs'>Webアプリケーションエンジニアを3年経験し、複数のBtoB,BtoCのWebアプリを構築した。その中で、フロントエンド（React）～バックエンド（Express）の設計・開発、クラウド(Azure)の構築ノウハウを身に着けた。また、CICD(AzureDevOps Pipeline)の整備を通して、資産品質の担保や開発プロセスの効率化に貢献した。また、Azure PaaS サポートエンジニアとしてAzure App Servise の領域を担当し、お客様より承る「このようなエラーが発生した」「こういった動作をしてほしいが実現可能か」かといったご質問についてサポートエンジニアとしてサポートの提供を行なっていた。 </span><br /><br />
             {/* <Image 
             src='/myphoto.jpeg'
             alt='logo'       

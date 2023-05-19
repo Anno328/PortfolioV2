@@ -80,7 +80,7 @@ function Skill(){
           <p className='text-xl mt-8'>Cloud:</p>
           <SkillCard
             skillName='Azure'
-            years='3'
+            years='4'
             imgUrl='/azure-icon.svg'
             level={4}
           />
