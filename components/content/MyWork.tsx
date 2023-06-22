@@ -77,12 +77,12 @@ function MyWork(){
         imgUrl='/y0537.png'
         />
         
-        <p className='text-xl mt-10'>Studying:</p>
+        {/* <p className='text-xl mt-10'>Studying:</p>
         <WorkCard 
         title='3DModel作成'
         description='ブラウザで3Dモデルを描画できることを検証した。(react-three-fiber)自作で3Dモデルが作成できれば、よりリッチなWebサイトが構築できると考え勉強中！'
         imgUrl='/y0896.png'
-        />
+        /> */}
       </div>
     )
   }

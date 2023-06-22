@@ -22,7 +22,7 @@ function AboutMe(){
             height={250}/>
             <div className='text-center mb-8'>
               <ThemeProvider theme={theme}>
-                <a  target="_blank" rel="noreferrer" href="https://github.com/Anno328/Resume/blob/master/Resume.md">
+                <a  target="_blank" rel="noreferrer" href="https://github.com/Anno328/Resume/blob/master/Resume.pdf">
                   <Button color="primary" variant="outlined" endIcon={<ContactsIcon />}>resume</Button>
                 </a>
               </ThemeProvider>
@@ -40,19 +40,19 @@ function AboutMe(){
           </div>
         <div className='text-left text-base md:text-xs'>
           <p className='text-xl mt-10 md:text-sm'>Vison:</p>
-          <p className=''>I want to be Full Stack Engineer!!</p>
-          <p className=''>I would like to offer a personalized website!!</p>
+          <p className=''>フルスタックWebエンジニアを目指しています。</p>
+          {/* <p className=''>I would like to offer a personalized website!!</p> */}
         </div>
 
         <div className='text-left text-base md:text-xs'>
           <p className='text-xl mt-10 md:text-sm'>Offline:</p>
-          <p className=''>I drink cofee a lot.</p>
-          <p className=''>I like to wear old clothes.</p>
-          <p className=''>I like to watch movies.</p>
-          <p className=''>I like to read SF books.</p>
-          <p className=''>I love cat.</p>
-          <p className=''>I like basketball.</p>
-          <p className=''>I like to taking photos.</p><br />
+          <p className=''>コーヒーをたくさん飲みます.</p>
+          <p className=''>古着が好きでよく着てます.</p>
+          <p className=''>映画が好きです.(特にSF)</p>
+          <p className=''>小説が好きです.(特にSF)</p>
+          <p className=''>猫が好きです.(たまに猫カフェに行きます)</p>
+          <p className=''>バスケが好きです.</p>
+          <p className=''>写真を撮ることが好きです.</p><br />
           <p className=''>You can see my offline from my Instagram!!</p><br />
         </div>
       </div>
