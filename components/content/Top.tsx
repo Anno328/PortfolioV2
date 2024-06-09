@@ -1,18 +1,25 @@
-import Image from 'next/image';
+import { Player } from "@lottiefiles/react-lottie-player";
+import { useRef } from "react";
 
-function Top(){
-    return (
+function Top() {
+  const playerRef = useRef(null);
+
+  return (
+    <div>
       <div>
-          <Image 
-            src='/y0581.png'
-            alt='logo'       
-            width={400}
-            height={400}/>
-          <p>Hello,I'm AnnoRyoya.</p>
-          <p>I'm a Web Developer!</p>
+        <Player
+          ref={playerRef}
+          autoplay={true}
+          loop={true}
+          src="/lottie1.json"
+          style={{ height: "200px", width: "200px" }}
+        ></Player>
       </div>
-    )
-  }
-  
-  export default Top
-  
+      <p>Hello,I'm AnnoRyoya.</p>
+
+      <p>I'm a Web Developer!</p>
+    </div>
+  );
+}
+
+export default Top;
