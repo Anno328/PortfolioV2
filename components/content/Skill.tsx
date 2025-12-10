@@ -59,6 +59,11 @@ function Skill() {
       <SkillCard skillName="DevOps(CICD)" years="3" level={4} />
       <p className="text-xl mt-8">other:</p>
       <SkillCard skillName="TOEIC(755)" years="5" level={3} />
+      <p className="text-xl mt-8">AI Coding Agent:</p>
+      <SkillCard skillName="Devin" years="1" imgUrl="" level={3} />
+      <SkillCard skillName="Cline" years="1" imgUrl="" level={4} />
+      <SkillCard skillName="Github Copilot" years="1" imgUrl="" level={3} />
+      <SkillCard skillName="Claude Code" years="1" imgUrl="" level={4} />
     </div>
   );
 }
