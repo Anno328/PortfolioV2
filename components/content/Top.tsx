@@ -1,5 +1,13 @@
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
 import { useRef } from "react";
+
+// Player を動的インポートし、SSR を無効化
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  {
+    ssr: false,
+  }
+);
 
 function Top() {
   const playerRef = useRef(null);
