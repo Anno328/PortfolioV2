@@ -90,6 +90,26 @@ function Top() {
           CONTACT
         </button>
       </div>
+      {/* 右下固定のパフォーマンスPDFボタン */}
+      <a
+        href="/Lighthouse Report Viewer.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "fixed",
+          right: "16px",
+          bottom: "16px",
+          fontSize: "12px",
+          color: "#6b7280",
+          textDecoration: "underline",
+          background: "rgba(255,255,255,0.8)",
+          borderRadius: "4px",
+          padding: "4px 8px",
+          zIndex: 1000,
+        }}
+      >
+        このページのパフォーマンスを見る
+      </a>
     </div>
   );
 }
