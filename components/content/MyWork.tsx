@@ -1,18 +1,33 @@
 import Image from "next/image";
 import WorkCard from "../../atom/WorkCard";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 function MyWork() {
   const [showPopup, setShowPopup] = useState(false);
+  const [popupClosing, setPopupClosing] = useState(false);
   const [showDoctorPopup, setShowDoctorPopup] = useState(false);
+  const [doctorPopupClosing, setDoctorPopupClosing] = useState(false);
   const [showC02Popup, setShowC02Popup] = useState(false);
+  const [c02PopupClosing, setC02PopupClosing] = useState(false);
   const [showAzurePopup, setShowAzurePopup] = useState(false);
+  const [azurePopupClosing, setAzurePopupClosing] = useState(false);
   const [showKnowledgePopup, setShowKnowledgePopup] = useState(false);
+  const [knowledgePopupClosing, setKnowledgePopupClosing] = useState(false);
+
+  const handleClosePopup = () => {
+    setPopupClosing(true);
+    setTimeout(() => {
+      setShowPopup(false);
+      setPopupClosing(false);
+    }, 500); // fadeOutAnimeのdurationと合わせる
+  };
 
   const popupDetail = (
     <div
-      className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
-      onClick={() => setShowPopup(false)}
+      className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${
+        popupClosing ? "fade-out" : "fade-in"
+      }`}
+      onClick={handleClosePopup}
     >
       <div
         className="bg-white py-12 px-8 rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative sm:max-w-xs"
@@ -21,7 +36,7 @@ function MyWork() {
         <div className="sticky top-0 right-0 flex justify-end z-10">
           <button
             className="text-gray-500 hover:text-gray-800 bg-white rounded-full p-2"
-            onClick={() => setShowPopup(false)}
+            onClick={handleClosePopup}
           >
             ×
           </button>
@@ -110,8 +125,16 @@ function MyWork() {
       />
       {showDoctorPopup && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
-          onClick={() => setShowDoctorPopup(false)}
+          className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${
+            doctorPopupClosing ? "fade-out" : "fade-in"
+          }`}
+          onClick={() => {
+            setDoctorPopupClosing(true);
+            setTimeout(() => {
+              setShowDoctorPopup(false);
+              setDoctorPopupClosing(false);
+            }, 500);
+          }}
         >
           <div
             className="bg-white py-12 px-8 rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative sm:max-w-xs"
@@ -120,7 +143,13 @@ function MyWork() {
             <div className="sticky top-0 right-0 flex justify-end z-10">
               <button
                 className="text-gray-500 hover:text-gray-800 bg-white rounded-full p-2"
-                onClick={() => setShowDoctorPopup(false)}
+                onClick={() => {
+                  setDoctorPopupClosing(true);
+                  setTimeout(() => {
+                    setShowDoctorPopup(false);
+                    setDoctorPopupClosing(false);
+                  }, 500);
+                }}
               >
                 ×
               </button>
@@ -192,8 +221,16 @@ function MyWork() {
       />
       {showC02Popup && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
-          onClick={() => setShowC02Popup(false)}
+          className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${
+            c02PopupClosing ? "fade-out" : "fade-in"
+          }`}
+          onClick={() => {
+            setC02PopupClosing(true);
+            setTimeout(() => {
+              setShowC02Popup(false);
+              setC02PopupClosing(false);
+            }, 500);
+          }}
         >
           <div
             className="bg-white py-12 px-8 rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative sm:max-w-xs"
@@ -202,7 +239,13 @@ function MyWork() {
             <div className="sticky top-0 right-0 flex justify-end z-10">
               <button
                 className="text-gray-500 hover:text-gray-800 bg-white rounded-full p-2"
-                onClick={() => setShowC02Popup(false)}
+                onClick={() => {
+                  setC02PopupClosing(true);
+                  setTimeout(() => {
+                    setShowC02Popup(false);
+                    setC02PopupClosing(false);
+                  }, 500);
+                }}
               >
                 ×
               </button>
@@ -306,8 +349,16 @@ function MyWork() {
       />
       {showAzurePopup && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
-          onClick={() => setShowAzurePopup(false)}
+          className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${
+            azurePopupClosing ? "fade-out" : "fade-in"
+          }`}
+          onClick={() => {
+            setAzurePopupClosing(true);
+            setTimeout(() => {
+              setShowAzurePopup(false);
+              setAzurePopupClosing(false);
+            }, 500);
+          }}
         >
           <div
             className="bg-white py-12 px-8 rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative sm:max-w-xs"
@@ -316,7 +367,13 @@ function MyWork() {
             <div className="sticky top-0 right-0 flex justify-end z-10">
               <button
                 className="text-gray-500 hover:text-gray-800 bg-white rounded-full p-2"
-                onClick={() => setShowAzurePopup(false)}
+                onClick={() => {
+                  setAzurePopupClosing(true);
+                  setTimeout(() => {
+                    setShowAzurePopup(false);
+                    setAzurePopupClosing(false);
+                  }, 500);
+                }}
               >
                 ×
               </button>
@@ -393,8 +450,16 @@ function MyWork() {
       />
       {showKnowledgePopup && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
-          onClick={() => setShowKnowledgePopup(false)}
+          className={`fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ${
+            knowledgePopupClosing ? "fade-out" : "fade-in"
+          }`}
+          onClick={() => {
+            setKnowledgePopupClosing(true);
+            setTimeout(() => {
+              setShowKnowledgePopup(false);
+              setKnowledgePopupClosing(false);
+            }, 500);
+          }}
         >
           <div
             className="bg-white py-12 px-8 rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative sm:max-w-xs"
@@ -403,7 +468,13 @@ function MyWork() {
             <div className="sticky top-0 right-0 flex justify-end z-10">
               <button
                 className="text-gray-500 hover:text-gray-800 bg-white rounded-full p-2"
-                onClick={() => setShowKnowledgePopup(false)}
+                onClick={() => {
+                  setKnowledgePopupClosing(true);
+                  setTimeout(() => {
+                    setShowKnowledgePopup(false);
+                    setKnowledgePopupClosing(false);
+                  }, 500);
+                }}
               >
                 ×
               </button>
