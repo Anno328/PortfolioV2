@@ -537,7 +537,7 @@ function MyWork() {
         imgUrl="/581.png"
       />
       <WorkCard
-        title="会社テックブログ"
+        title="企業テックブログ"
         description="在職中に公開したブログ記事です。技術的な内容を中心に執筆しています。"
         link="https://tech.visasq.com/archive/author/ryoyaanno"
         imgUrl="/581.png"

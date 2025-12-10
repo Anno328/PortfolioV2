@@ -10,11 +10,11 @@ function WorkCard(props: any) {
         <p className="text-sm my-8">{props.description}</p>
         {props.link ? (
           <a
-            className="text-sm my-4 block underline md:text-xs"
+            className="mt-2 px-2 py-1 text-xs text-blue-600 underline bg-transparent rounded hover:text-blue-800 transition border-none shadow-none my-4 block md:text-xs"
             target="_blank"
             href={props.link}
           >
-            See more!
+            詳細を見る
           </a>
         ) : (
           <></>
