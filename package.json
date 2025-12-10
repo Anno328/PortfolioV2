@@ -29,7 +29,7 @@
     "three": "^0.140.2"
   },
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
