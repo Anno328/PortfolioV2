@@ -8,7 +8,7 @@ function Skill() {
       <p className="text-xl mt-8">Language:</p>
       <SkillCard
         skillName="javascript"
-        years="6"
+        years="8"
         imgUrl="/javascript.svg"
         level={4}
       />
@@ -18,15 +18,15 @@ function Skill() {
         imgUrl="/typescript-icon.svg"
         level={4}
       />
-      <SkillCard skillName="python" years="1" imgUrl="/python.webp" level={1} />
+      <SkillCard skillName="python" years="2" imgUrl="/python.webp" level={3} />
       <SkillCard skillName="java" years="2" imgUrl="/java.svg" level={3} />
       <SkillCard skillName="C#" years="2" imgUrl="/c-sharp.svg" level={3} />
-      <SkillCard skillName="SQL" years="3" imgUrl="/mysql.svg" level={3} />
-      <SkillCard skillName="HTML" years="7" imgUrl="/html-5.svg" level={4} />
-      <SkillCard skillName="CSS" years="7" imgUrl="/css-3.svg" level={4} />
+      <SkillCard skillName="SQL" years="4" imgUrl="/mysql.svg" level={3} />
+      <SkillCard skillName="HTML" years="8" imgUrl="/html-5.svg" level={4} />
+      <SkillCard skillName="CSS" years="8" imgUrl="/css-3.svg" level={4} />
       <p className="text-xl mt-8">Flamework:</p>
       <SkillCard skillName="React" years="4" imgUrl="/react.svg" level={4} />
-      <SkillCard skillName="Nuxt" years="1" imgUrl="/nuxt.svg" level={2} />
+      <SkillCard skillName="Nuxt" years="3" imgUrl="/nuxt.svg" level={3} />
       <SkillCard skillName="Next.js" years="1" imgUrl="/nextjs.svg" level={2} />
       <SkillCard
         skillName="Angular"
