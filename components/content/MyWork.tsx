@@ -82,6 +82,8 @@ function MyWork() {
         description="太陽光発電に用いるソーラパネルの発電量や使用量を管理するサービス。フロントエンド(React)、バックエンド(Express)、クラウド環境(Azure)の構築・開発・保守を担当した。"
         imgUrl="/y0615.png"
         onClick={() => setShowPopup(true)}
+        showDetailButton={true}
+        onDetailClick={() => setShowPopup(true)}
       />
       {showPopup && popupDetail}
       <WorkCard

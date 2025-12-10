@@ -19,6 +19,18 @@ function WorkCard(props: any) {
         ) : (
           <></>
         )}
+        {props.showDetailButton ? (
+          <button
+            className="mt-2 px-2 py-1 text-xs text-blue-600 underline bg-transparent rounded hover:text-blue-800 transition border-none shadow-none"
+            style={{ minWidth: "auto" }}
+            onClick={(e) => {
+              e.stopPropagation();
+              props.onDetailClick && props.onDetailClick();
+            }}
+          >
+            詳細を見る
+          </button>
+        ) : null}
       </div>
     </div>
   );
