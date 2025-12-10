@@ -53,15 +53,9 @@ function MyWork() {
       />
       <WorkCard
         title="写真ポートフォリオ"
-        description="趣味で撮影した写真のポートフォリオを公開しています。"
+        description="趣味で撮影した写真のポートフォリオを公開しています。アニメーション部分を試行しており、見栄えの良いサイトを目指しました。"
         link="https://photo-portfolio-ryoyaanno.vercel.app/"
         imgUrl="/951.png"
-      />
-      <WorkCard
-        title="ブログ"
-        description="ノウハウをまとめたブログを公開しています。"
-        link="https://anno-blog.vercel.app/"
-        imgUrl="/581.png"
       />
       {/* <WorkCard
         title="WhatIPay"
@@ -95,6 +89,18 @@ function MyWork() {
         description="Qiitaで習得したノウハウをアウトプットしています。Please follow me!"
         link="https://qiita.com/Annoske"
         imgUrl="/y0537.png"
+      />
+      <WorkCard
+        title="個人ブログ"
+        description="ノウハウをまとめたブログを公開しています。技術的な内容を中心に執筆しています。"
+        link="https://anno-blog.vercel.app/"
+        imgUrl="/581.png"
+      />
+      <WorkCard
+        title="会社テックブログ"
+        description="在職中に公開したブログ記事です。技術的な内容を中心に執筆しています。"
+        link="https://tech.visasq.com/archive/author/ryoyaanno"
+        imgUrl="/581.png"
       />
 
       {/* <p className='text-xl mt-10'>Studying:</p>
