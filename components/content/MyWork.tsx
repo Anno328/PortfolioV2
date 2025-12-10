@@ -1,7 +1,77 @@
 import Image from "next/image";
 import WorkCard from "../../atom/WorkCard";
+import React, { useState } from "react";
 
 function MyWork() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const popupDetail = (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+      onClick={() => setShowPopup(false)}
+    >
+      <div
+        className="bg-white py-12 px-8 rounded-lg max-w-4xl max-h-[90vh] overflow-auto relative sm:max-w-xs"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sticky top-0 right-0 flex justify-end z-10">
+          <button
+            className="text-gray-500 hover:text-gray-800 bg-white rounded-full p-2"
+            onClick={() => setShowPopup(false)}
+          >
+            ×
+          </button>
+        </div>
+        <p>
+          戸建て住宅に設置する太陽光発電に用いるソーラパネルの発電量や使用量を管理するシステムを開発。10人未満のアジャイル体制にて開発を実施。
+        </p>
+        <h3 className="font-bold mt-4">≪担当業務≫</h3>
+        <ul className="list-disc ml-6">
+          <li>
+            ・フロントエンド(React)、バックエンド(Express)、クラウド環境(Azure)の構築
+          </li>
+          <li>・開発・保守を担当</li>
+          <li>・顧客との調整、ヒアリング</li>
+          <li>・若手メンバーの育成・コードレビュー・技術相談対応</li>
+          <li>・小さなタスク単位での進行管理</li>
+        </ul>
+        <h3 className="font-bold mt-4">≪習得スキル≫</h3>
+        <ul className="list-disc ml-6">
+          <li>・React / Express を用いたフルスタック開発スキル</li>
+          <li>
+            ・Azure App Service、Azure Functions
+            等を活用したクラウド環境構築スキル
+          </li>
+          <li>・アジャイル開発（スクラム）でのチーム開発経験</li>
+          <li>・API 設計、非同期通信まわりの実装ノウハウ</li>
+          <li>・パフォーマンスを意識したフロント・バック間のデータ連携設計</li>
+          <li>・顧客ヒアリング・要件整理スキル</li>
+        </ul>
+        <h3 className="font-bold mt-4">≪コメント≫</h3>
+        <ul className="list-disc ml-6">
+          <li>
+            ・太陽光発電量をリアルタイムに可視化するため、非同期通信やデータ更新の負荷を考慮して設計を行いました。
+          </li>
+          <li>
+            ・React・Express・Azure
+            を組み合わせるフルスタック構成であったため、各レイヤー間の整合性を意識した開発を心がけました。
+          </li>
+          <li>
+            ・アジャイル開発（スクラム）で進行しており、短いスプリントの中で要件調整
+            → 実装 → テスト →
+            レビューを繰り返すことで、迅速に改善を回す経験ができました。
+          </li>
+          <li>
+            ・顧客との調整やヒアリングも担当し、非エンジニア向けにもわかりやすく技術的背景を説明する力が身につきました。
+          </li>
+          <li>
+            ・若手メンバーへの技術支援やコードレビューを積極的に行い、チーム全体の生産性と品質向上に貢献しました。
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <div>
       <Image src="/y0743.png" alt="logo" width={250} height={250} />
@@ -11,7 +81,9 @@ function MyWork() {
         title="一般家庭向け電力系Webサービス"
         description="太陽光発電に用いるソーラパネルの発電量や使用量を管理するサービス。フロントエンド(React)、バックエンド(Express)、クラウド環境(Azure)の構築・開発・保守を担当した。"
         imgUrl="/y0615.png"
+        onClick={() => setShowPopup(true)}
       />
+      {showPopup && popupDetail}
       <WorkCard
         title="医師向け患者診断サポートサービス"
         description="生体情報を定期的に、正確に把握する必要がある糖尿病患者や妊婦さんが、ウェアラブル端末を用いて生体情報をクラウドにアップロードし医師に連携するサービス。.netCore、クラウド環境(Azure)でのWebページ保守を担当した。"
