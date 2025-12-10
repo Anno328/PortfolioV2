@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
-import { useRef } from "react";
+import { useContext } from "react";
+import { AppContext } from "../../pages/index";
 
 // Player を動的インポートし、SSR を無効化
 const Player = dynamic(
@@ -10,13 +11,11 @@ const Player = dynamic(
 );
 
 function Top() {
-  const playerRef = useRef(null);
-
+  const { setContent } = useContext(AppContext);
   return (
     <div>
       <div>
         <Player
-          ref={playerRef}
           autoplay={true}
           loop={true}
           src="/lottie1.json"
@@ -26,6 +25,71 @@ function Top() {
       <p>Hello,I'm AnnoRyoya.</p>
 
       <p>I'm a Web Developer!</p>
+
+      <div
+        style={{
+          marginTop: "3rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <button
+          style={{
+            textDecoration: "underline",
+            display: "block",
+            cursor: "pointer",
+            background: "none",
+            border: "none",
+            fontSize: "inherit",
+            marginBottom: "1.5rem",
+          }}
+          onClick={() => setContent("ABOUT ME")}
+        >
+          ABOUT ME
+        </button>
+        <button
+          style={{
+            textDecoration: "underline",
+            display: "block",
+            cursor: "pointer",
+            background: "none",
+            border: "none",
+            fontSize: "inherit",
+            marginBottom: "1.5rem",
+          }}
+          onClick={() => setContent("SKILL")}
+        >
+          SKILL
+        </button>
+        <button
+          style={{
+            textDecoration: "underline",
+            display: "block",
+            cursor: "pointer",
+            background: "none",
+            border: "none",
+            fontSize: "inherit",
+            marginBottom: "1.5rem",
+          }}
+          onClick={() => setContent("MY WORK")}
+        >
+          MY WORK
+        </button>
+        <button
+          style={{
+            textDecoration: "underline",
+            display: "block",
+            cursor: "pointer",
+            background: "none",
+            border: "none",
+            fontSize: "inherit",
+          }}
+          onClick={() => setContent("CONTACT")}
+        >
+          CONTACT
+        </button>
+      </div>
     </div>
   );
 }
