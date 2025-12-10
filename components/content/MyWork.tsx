@@ -22,52 +22,62 @@ function MyWork() {
             ×
           </button>
         </div>
-        <p>
-          戸建て住宅に設置する太陽光発電に用いるソーラパネルの発電量や使用量を管理するシステムを開発。10人未満のアジャイル体制にて開発を実施。
-        </p>
-        <h3 className="font-bold mt-4">≪担当業務≫</h3>
-        <ul className="list-disc ml-6">
-          <li>
-            ・フロントエンド(React)、バックエンド(Express)、クラウド環境(Azure)の構築
-          </li>
-          <li>・開発・保守を担当</li>
-          <li>・顧客との調整、ヒアリング</li>
-          <li>・若手メンバーの育成・コードレビュー・技術相談対応</li>
-          <li>・小さなタスク単位での進行管理</li>
-        </ul>
-        <h3 className="font-bold mt-4">≪習得スキル≫</h3>
-        <ul className="list-disc ml-6">
-          <li>・React / Express を用いたフルスタック開発スキル</li>
-          <li>
-            ・Azure App Service、Azure Functions
-            等を活用したクラウド環境構築スキル
-          </li>
-          <li>・アジャイル開発（スクラム）でのチーム開発経験</li>
-          <li>・API 設計、非同期通信まわりの実装ノウハウ</li>
-          <li>・パフォーマンスを意識したフロント・バック間のデータ連携設計</li>
-          <li>・顧客ヒアリング・要件整理スキル</li>
-        </ul>
-        <h3 className="font-bold mt-4">≪コメント≫</h3>
-        <ul className="list-disc ml-6">
-          <li>
-            ・太陽光発電量をリアルタイムに可視化するため、非同期通信やデータ更新の負荷を考慮して設計を行いました。
-          </li>
-          <li>
-            ・React・Express・Azure
-            を組み合わせるフルスタック構成であったため、各レイヤー間の整合性を意識した開発を心がけました。
-          </li>
-          <li>
-            ・アジャイル開発（スクラム）で進行しており、短いスプリントの中で要件調整
-            → 実装 → テスト →
-            レビューを繰り返すことで、迅速に改善を回す経験ができました。
-          </li>
-          <li>
-            ・顧客との調整やヒアリングも担当し、非エンジニア向けにもわかりやすく技術的背景を説明する力が身につきました。
-          </li>
-          <li>
-            ・若手メンバーへの技術支援やコードレビューを積極的に行い、チーム全体の生産性と品質向上に貢献しました。
-          </li>
-        </ul>
+        <div className="space-y-8 text-left">
+          <section>
+            <h2 className="font-bold text-lg mb-2 border-b pb-1">概要</h2>
+            <p className="text-sm">
+              戸建て住宅に設置する太陽光発電に用いるソーラパネルの発電量や使用量を管理するシステムを開発。10人未満のアジャイル体制にて開発を実施。
+            </p>
+          </section>
+          <section>
+            <h2 className="font-bold text-lg mb-2 border-b pb-1">担当業務</h2>
+            <ul className="list-disc ml-6 text-sm">
+              <li>
+                フロントエンド(React)、バックエンド(Express)、クラウド環境(Azure)の構築
+              </li>
+              <li>開発・保守を担当</li>
+              <li>顧客との調整、ヒアリング</li>
+              <li>若手メンバーの育成・コードレビュー・技術相談対応</li>
+              <li>小さなタスク単位での進行管理</li>
+            </ul>
+          </section>
+          <section>
+            <h2 className="font-bold text-lg mb-2 border-b pb-1">習得スキル</h2>
+            <ul className="list-disc ml-6 text-sm">
+              <li>React / Express を用いたフルスタック開発スキル</li>
+              <li>
+                Azure App Service、Azure
+                Functions等を活用したクラウド環境構築スキル
+              </li>
+              <li>アジャイル開発（スクラム）でのチーム開発経験</li>
+              <li>API 設計、非同期通信まわりの実装ノウハウ</li>
+              <li>
+                パフォーマンスを意識したフロント・バック間のデータ連携設計
+              </li>
+              <li>顧客ヒアリング・要件整理スキル</li>
+            </ul>
+          </section>
+          <section>
+            <h2 className="font-bold text-lg mb-2 border-b pb-1">コメント</h2>
+            <ul className="list-disc ml-6 text-sm">
+              <li>
+                太陽光発電量をリアルタイムに可視化するため、非同期通信やデータ更新の負荷を考慮して設計を行いました。
+              </li>
+              <li>
+                React・Express・Azureを組み合わせるフルスタック構成であったため、各レイヤー間の整合性を意識した開発を心がけました。
+              </li>
+              <li>
+                アジャイル開発（スクラム）で進行しており、短いスプリントの中で要件調整→実装→テスト→レビューを繰り返すことで、迅速に改善を回す経験ができました。
+              </li>
+              <li>
+                顧客との調整やヒアリングも担当し、非エンジニア向けにもわかりやすく技術的背景を説明する力が身につきました。
+              </li>
+              <li>
+                若手メンバーへの技術支援やコードレビューを積極的に行い、チーム全体の生産性と品質向上に貢献しました。
+              </li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );
