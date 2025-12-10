@@ -6,8 +6,36 @@ body{
     background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
 }
 
-/* .alert-exit-active {
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-in {
+  animation: fadeInAnime 0.5s ease;
+}
+
+@keyframes fadeInAnime {
+  from {
     opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 300ms, transform 300ms;
-} */
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

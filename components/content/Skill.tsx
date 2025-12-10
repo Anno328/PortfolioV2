@@ -3,7 +3,7 @@ import SkillCard from "../../atom/SkillCard";
 
 function Skill() {
   return (
-    <div>
+    <div className="fade-in">
       <Image src="/y1150.png" alt="logo" width={250} height={250} />
       <p className="text-xl mt-8">Language:</p>
       <SkillCard

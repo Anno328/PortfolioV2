@@ -8,8 +8,11 @@ const Menu = () => {
   const { setContent, setShow } = useContext(AppContext);
 
   function onTopicClick(contentTitle: string) {
-    setContent(contentTitle);
-    setShow(true);
+    setShow(false);
+    setTimeout(() => {
+      setContent(contentTitle);
+      setShow(true);
+    }, 10);
   }
 
   return (

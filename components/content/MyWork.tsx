@@ -87,7 +87,7 @@ function MyWork() {
   );
 
   return (
-    <div>
+    <div className="fade-in">
       <Image src="/y0743.png" alt="logo" width={250} height={250} />
 
       <p className="text-xl mt-10">Bussiness Projects:</p>

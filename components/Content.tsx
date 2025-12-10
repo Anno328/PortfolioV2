@@ -15,8 +15,15 @@ const Content = (props: any) => {
   const { content, show, setShow } = useContext(AppContext);
 
   useEffect(() => {
-    const contentElement = document.querySelector("#content");
     setShow(false);
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 10);
+    return () => clearTimeout(timer);
+  }, [content]);
+
+  useEffect(() => {
+    const contentElement = document.querySelector("#content");
     contentElement?.scrollTo(0, 0);
   });
 
