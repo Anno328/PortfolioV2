@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="font-mono	font-bold text-gray-700">
+    <div className="font-monofont-bold text-gray-700 flex">
       <AppContext.Provider value={{ content, setContent, show, setShow }}>
         <Menu />
         <Content />

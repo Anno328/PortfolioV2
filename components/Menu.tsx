@@ -16,9 +16,9 @@ const Menu = () => {
   }
 
   return (
-    <div className="bg-slate-50 h-screen w-2/5 float-left	text-center	static overflow-auto md:w-1/3">
+    <div className="bg-slate-50 w-1/3 float-lefttext-centerstatic overflow-auto md:w-1/4 text-center">
       <Profile />
-      <div className="Topics grid grid-rows-2 grid-flow-col md:grid-rows-4">
+      <div className="Topics mt-10 flex flex-col gap-4">
         <div
           onClick={() => {
             onTopicClick("ABOUT ME");

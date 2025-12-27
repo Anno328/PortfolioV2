@@ -14,14 +14,13 @@ const Profile = () => {
   return (
     <div>
       <div
-        className="bg-gray-50 w-40 h-40 rounded-full mx-auto mt-12 drop-shadow-lg  md:w-16 md:h-16"
+        className="bg-gray-50 w-20 h-20 rounded-full mx-auto mt-12 drop-shadow-lg  md:w-16 md:h-16"
         onClick={() => {
           onTopicClick("initial");
         }}
       >
-        <Image src="/icon.png" alt="logo" width={200} height={200} />
+        <Image src="/icon.png" alt="logo" width={150} height={150} />
       </div>
-      <p className="font-black text-2xl mt-4 md:text-sm">AnnoRyoya</p> <br />
       <div className="flex items-center justify-center mt-4 text-center">
         <a
           href="https://www.linkedin.com/in/Anno-Ryoya/"
