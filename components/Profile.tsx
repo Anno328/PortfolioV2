@@ -19,7 +19,7 @@ const Profile = () => {
           onTopicClick("initial");
         }}
       >
-        <Image src="/y0679.png" alt="logo" width={200} height={200} />
+        <Image src="/icon.png" alt="logo" width={200} height={200} />
       </div>
       <p className="font-black text-2xl mt-4 md:text-sm">AnnoRyoya</p> <br />
       <div className="flex items-center justify-center mt-4 text-center">

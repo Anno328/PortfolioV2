@@ -14,7 +14,7 @@ const theme = createTheme({
 function AboutMe() {
   return (
     <div className="fade-in">
-      <Image src="/y0679.png" alt="logo" width={250} height={250} />
+      <Image src="/icon.png" alt="logo" width={250} height={250} />
       <div className="text-left">
         <span className="text-xl md:text-base">Name:</span>
         <span className="text-xl md:text-base">AnnoRyoya</span>
