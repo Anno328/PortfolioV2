@@ -1,11 +1,13 @@
 import Image from "next/image";
 import SkillCard from "../../atom/SkillCard";
+import { useTranslation } from "next-i18next";
 
 function Skill() {
+  const { t } = useTranslation();
   return (
     <div className="fade-in">
       <Image src="/y1150.png" alt="logo" width={250} height={250} />
-      <p className="text-xl mt-8">Language:</p>
+      <p className="text-xl mt-8">{t("language")}:</p>
       <SkillCard
         skillName="javascript"
         years="8"
@@ -24,7 +26,7 @@ function Skill() {
       <SkillCard skillName="SQL" years="4" imgUrl="/mysql.svg" level={3} />
       <SkillCard skillName="HTML" years="8" imgUrl="/html-5.svg" level={4} />
       <SkillCard skillName="CSS" years="8" imgUrl="/css-3.svg" level={4} />
-      <p className="text-xl mt-8">Flamework:</p>
+      <p className="text-xl mt-8">{t("framework")}:</p>
       <SkillCard skillName="React" years="4" imgUrl="/react.svg" level={4} />
       <SkillCard skillName="Nuxt" years="3" imgUrl="/nuxt.svg" level={3} />
       <SkillCard skillName="Next.js" years="1" imgUrl="/nextjs.svg" level={2} />
@@ -40,7 +42,7 @@ function Skill() {
         imgUrl="/express.svg"
         level={3}
       />
-      <p className="text-xl mt-8">Cloud:</p>
+      <p className="text-xl mt-8">{t("cloud")}:</p>
       <SkillCard
         skillName="Azure"
         years="4"
@@ -54,12 +56,12 @@ function Skill() {
         level={3}
       />
       <SkillCard skillName="AWS" years="1" imgUrl="/aws.svg" level={2} />
-      <p className="text-xl mt-8">Developing:</p>
+      <p className="text-xl mt-8">{t("developing")}:</p>
       <SkillCard skillName="scrum(LSM)" years="3" level={3} />
       <SkillCard skillName="DevOps(CICD)" years="3" level={4} />
-      <p className="text-xl mt-8">other:</p>
+      <p className="text-xl mt-8">{t("other")}:</p>
       <SkillCard skillName="TOEIC(755)" years="5" level={3} />
-      <p className="text-xl mt-8">AI Coding Agent:</p>
+      <p className="text-xl mt-8">{t("aiCodingAgent")}:</p>
       <SkillCard skillName="Devin" years="1" imgUrl="" level={3} />
       <SkillCard skillName="Cline" years="1" imgUrl="" level={4} />
       <SkillCard skillName="Github Copilot" years="1" imgUrl="" level={3} />

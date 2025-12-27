@@ -1,8 +1,10 @@
 import Image from "next/image";
 import WorkCard from "../../atom/WorkCard";
 import React, { useState, useRef } from "react";
+import { useTranslation } from "next-i18next";
 
 function MyWork() {
+  const { t } = useTranslation();
   const [showPopup, setShowPopup] = useState(false);
   const [popupClosing, setPopupClosing] = useState(false);
   const [showDoctorPopup, setShowDoctorPopup] = useState(false);
@@ -105,7 +107,7 @@ function MyWork() {
     <div className="fade-in">
       <Image src="/y0743.png" alt="logo" width={250} height={250} />
 
-      <p className="text-xl mt-10">Bussiness Projects:</p>
+      <p className="text-xl mt-10">{t("businessProjects")}:</p>
       <WorkCard
         title="一般家庭向け電力系Webサービス"
         description="太陽光発電に用いるソーラパネルの発電量や使用量を管理するサービス。フロントエンド(React)、バックエンド(Express)、クラウド環境(Azure)の構築・開発・保守を担当した。"
@@ -555,7 +557,7 @@ function MyWork() {
         </div>
       )}
 
-      <p className="text-xl mt-10">Private Projects:</p>
+      <p className="text-xl mt-10">{t("privateProjects")}:</p>
       <WorkCard
         title="CreateiveCoding"
         description="3dモデルをWebページ上に描画できるSplineや、簡易なアニメーションを実現できるLottieを利用した見栄えのいいインタラクションをサンドボックス環境で作成している。"
@@ -594,7 +596,7 @@ function MyWork() {
         imgUrl="/y0357.png"
       /> */}
 
-      <p className="text-xl mt-10">Writing:</p>
+      <p className="text-xl mt-10">{t("writing")}:</p>
       <WorkCard
         title="Qiita"
         description="Qiitaで習得したノウハウをアウトプットしています。Please follow me!"

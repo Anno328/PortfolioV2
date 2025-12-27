@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { useContext } from "react";
 import Image from "next/image";
 import { AppContext } from "../../pages/index";
+import { useTranslation } from "next-i18next";
 
 // Player を動的インポートし、SSR を無効化
 const Player = dynamic(
@@ -13,6 +14,7 @@ const Player = dynamic(
 
 function Top() {
   const { setContent } = useContext(AppContext);
+  const { t } = useTranslation();
   return (
     <div>
       <div>
@@ -23,9 +25,9 @@ function Top() {
           style={{ height: "200px", width: "200px" }}
         ></Player>
       </div>
-      <p>Hello,I'm AnnoRyoya.</p>
+      <p>{t("helloAnno")}</p>
 
-      <p>I'm a Web Developer!</p>
+      <p>{t("webDeveloper")}</p>
 
       <div
         style={{
@@ -45,9 +47,9 @@ function Top() {
             fontSize: "inherit",
             marginBottom: "1.5rem",
           }}
-          onClick={() => setContent("ABOUT ME")}
+          onClick={() => setContent(t("aboutMe"))}
         >
-          ABOUT ME
+          {t("aboutMe")}
         </button>
         <button
           style={{
@@ -59,9 +61,9 @@ function Top() {
             fontSize: "inherit",
             marginBottom: "1.5rem",
           }}
-          onClick={() => setContent("SKILL")}
+          onClick={() => setContent(t("skills"))}
         >
-          SKILL
+          {t("skills")}
         </button>
         <button
           style={{
@@ -73,9 +75,9 @@ function Top() {
             fontSize: "inherit",
             marginBottom: "1.5rem",
           }}
-          onClick={() => setContent("MY WORK")}
+          onClick={() => setContent(t("myWork"))}
         >
-          MY WORK
+          {t("myWork")}
         </button>
         <button
           style={{
@@ -86,9 +88,9 @@ function Top() {
             border: "none",
             fontSize: "inherit",
           }}
-          onClick={() => setContent("CONTACT")}
+          onClick={() => setContent(t("contact"))}
         >
-          CONTACT
+          {t("contact")}
         </button>
         <button
           style={{
@@ -100,9 +102,9 @@ function Top() {
             fontSize: "inherit",
             marginTop: "1.5rem",
           }}
-          onClick={() => setContent("SUPPORT")}
+          onClick={() => setContent(t("support"))}
         >
-          SUPPORT
+          {t("support")}
         </button>
       </div>
       {/* 右下固定のパフォーマンスPDFボタン */}
@@ -123,7 +125,7 @@ function Top() {
           zIndex: 1000,
         }}
       >
-        このページのパフォーマンスを見る
+        {t("performancePdf")}
       </a>
     </div>
   );

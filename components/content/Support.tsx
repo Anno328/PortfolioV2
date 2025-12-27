@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 function Support() {
+  const { t } = useTranslation();
   return (
     <div className="fade-in" style={{ textAlign: "center", marginTop: "2rem" }}>
       <blockquote
@@ -15,13 +17,7 @@ function Support() {
           maxWidth: "420px",
         }}
       >
-        <span className="text-base md:text-xs">
-          ここにある制作物は、
-          <br />
-          すべて個人で作っています。
-          <br />
-          応援いただけると、次の制作の励みになります。
-        </span>
+        <span className="text-base md:text-xs">{t("supportMessage")}</span>
       </blockquote>
       <a
         href="https://www.buymeacoffee.com/ryoyaanno"

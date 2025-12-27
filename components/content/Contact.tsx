@@ -7,6 +7,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import React, { useState } from "react";
 import emailjs, { init } from "emailjs-com";
+import { useTranslation } from "next-i18next";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
@@ -19,6 +20,7 @@ const theme = createTheme({
 });
 
 function Contact() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [openVallidationError, setOpenVallidationError] = useState(false);
   const [openProgress, setOpenProgress] = useState(false);
@@ -91,7 +93,7 @@ function Contact() {
   return (
     <div className="fade-in">
       <Image src="/y0689.png" alt="logo" width={250} height={250} />
-      <p className="text-xl animate-bounce">Interested? Contact Me!</p>
+      <p className="text-xl animate-bounce">{t("contactLead")}</p>
       <br />
       <form action="">
         <TextField
@@ -99,7 +101,7 @@ function Contact() {
           fullWidth
           margin="dense"
           id="yourName"
-          label="Your Name"
+          label={t("yourName")}
           variant="outlined"
           onChange={() => {
             onChangeEmailName(event);
@@ -111,7 +113,7 @@ function Contact() {
           fullWidth
           margin="dense"
           id="yourEmail"
-          label="Your Email"
+          label={t("yourEmail")}
           variant="outlined"
           onChange={() => {
             onChangeEmailMail(event);
@@ -123,7 +125,7 @@ function Contact() {
           fullWidth
           margin="dense"
           id="subject"
-          label="Subject"
+          label={t("subject")}
           variant="outlined"
           onChange={() => {
             onChangeEmailSubject(event);
@@ -135,7 +137,7 @@ function Contact() {
           fullWidth
           margin="dense"
           id="yourMessage"
-          label="Your Message"
+          label={t("yourMessage")}
           variant="outlined"
           onChange={() => {
             onChangeEmailText(event);
@@ -160,7 +162,7 @@ function Contact() {
             }}
             endIcon={<SendIcon />}
           >
-            Send
+            {t("send")}
           </Button>
         </ThemeProvider>
       </form>
@@ -180,7 +182,7 @@ function Contact() {
             margin: "auto",
             display: "block",
           }}
-          message={<span>Sent an e-mail!</span>}
+          message={<span>{t("sentEmail")}</span>}
         />
       </Snackbar>
 
@@ -199,7 +201,7 @@ function Contact() {
             margin: "auto",
             display: "block",
           }}
-          message={<span>Please enter the correct value...</span>}
+          message={<span>{t("validationError")}</span>}
         />
       </Snackbar>
     </div>

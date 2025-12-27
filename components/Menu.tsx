@@ -3,56 +3,131 @@ const Profile = dynamic(() => import("../components/Profile"));
 const TopicCard = dynamic(() => import("../atom/TopicCard"));
 import { useContext } from "react";
 import { AppContext } from "../pages/index";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const Menu = () => {
-  const { setContent, setShow } = useContext(AppContext);
+  const { setContent, setShow, content } = useContext(AppContext);
+  const { t, i18n } = useTranslation();
+  const router = useRouter();
 
-  function onTopicClick(contentTitle: string) {
+  const toggleLanguage = () => {
+    const nextLocale = i18n.language === "ja" ? "en" : "ja";
+    router.push(router.pathname, router.asPath, { locale: nextLocale });
+  };
+
+  function onTopicClick(contentKey: string) {
     setShow(false);
     setTimeout(() => {
-      setContent(contentTitle);
+      setContent(contentKey);
       setShow(true);
     }, 10);
   }
 
   return (
-    <div className="bg-slate-50 w-1/3 float-lefttext-centerstatic overflow-auto md:w-1/4 text-center">
+    <div className="bg-slate-50 w-1/3 float-left text-center static overflow-auto md:w-1/4 ">
+      <div
+        style={{
+          position: "absolute",
+          bottom: 8,
+          left: 8,
+          display: "flex",
+          alignItems: "center",
+          gap: "0.25rem",
+          zIndex: 10,
+        }}
+      >
+        <button
+          onClick={() => {
+            router
+              .push(router.pathname, router.asPath, { locale: "en" })
+              .then(() => {
+                window.location.reload();
+              });
+          }}
+          style={{
+            padding: "0.15rem 0.5rem",
+            border: "none",
+            background: "none",
+            color: i18n.language === "en" ? "#2563eb" : "#222",
+            fontWeight: 700,
+            minWidth: "32px",
+            cursor: "pointer",
+            borderBottom:
+              i18n.language === "en" ? "2.5px solid #2563eb" : "none",
+            transition: "border-bottom 0.2s",
+          }}
+          className="text-[0.95rem] md:text-xs"
+        >
+          en
+        </button>
+        <span
+          style={{ color: "#888", fontWeight: 700 }}
+          className="text-[1rem] md:text-xs"
+        >
+          /
+        </span>
+        <button
+          onClick={() => {
+            router
+              .push(router.pathname, router.asPath, { locale: "ja" })
+              .then(() => {
+                window.location.reload();
+              });
+          }}
+          style={{
+            padding: "0.15rem 0.5rem",
+            border: "none",
+            background: "none",
+            color: i18n.language === "ja" ? "#2563eb" : "#222",
+            fontWeight: 700,
+            minWidth: "32px",
+            cursor: "pointer",
+            borderBottom:
+              i18n.language === "ja" ? "2.5px solid #2563eb" : "none",
+            transition: "border-bottom 0.2s",
+          }}
+          className="text-[0.95rem] md:text-xs"
+        >
+          jp
+        </button>
+      </div>
       <Profile />
       <div className="Topics mt-10 flex flex-col gap-4">
         <div
           onClick={() => {
-            onTopicClick("ABOUT ME");
+            onTopicClick(t("aboutMe"));
           }}
         >
-          <TopicCard topicTitle="ABOUT ME" imagePath="/y0530.png" />
+          <TopicCard topicTitle={t("aboutMe")} imagePath="/y0530.png" />
         </div>
         <div
           onClick={() => {
-            onTopicClick("MY WORK");
+            onTopicClick(t("myWork"));
           }}
         >
-          <TopicCard topicTitle="MY WORK" imagePath="/y0749.png" />
+          <TopicCard topicTitle={t("myWork")} imagePath="/y0749.png" />
         </div>
         <div
           onClick={() => {
-            onTopicClick("SKILL");
+            onTopicClick(t("skills"));
           }}
         >
-          <TopicCard topicTitle="SKILL" imagePath="/y0682.png" />
+          <TopicCard topicTitle={t("skills")} imagePath="/y0682.png" />
         </div>
         <div
           onClick={() => {
-            onTopicClick("CONTACT");
+            onTopicClick(t("contact"));
           }}
         >
-          <TopicCard topicTitle="CONTACT" imagePath="/y0550.png" />
+          <TopicCard topicTitle={t("contact")} imagePath="/y0550.png" />
         </div>
         <div
           onClick={() => {
-            onTopicClick("SUPPORT");
+            onTopicClick(t("support"));
           }}
         >
-          <TopicCard topicTitle="SUPPORT" imagePath="/1210.png" />
+          <TopicCard topicTitle={t("support")} imagePath="/1210.png" />
         </div>
       </div>
     </div>
