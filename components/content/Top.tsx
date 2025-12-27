@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { useContext } from "react";
+import Image from "next/image";
 import { AppContext } from "../../pages/index";
 
 // Player を動的インポートし、SSR を無効化
@@ -88,6 +89,20 @@ function Top() {
           onClick={() => setContent("CONTACT")}
         >
           CONTACT
+        </button>
+        <button
+          style={{
+            textDecoration: "underline",
+            display: "block",
+            cursor: "pointer",
+            background: "none",
+            border: "none",
+            fontSize: "inherit",
+            marginTop: "1.5rem",
+          }}
+          onClick={() => setContent("SUPPORT")}
+        >
+          SUPPORT
         </button>
       </div>
       {/* 右下固定のパフォーマンスPDFボタン */}

@@ -10,6 +10,7 @@ import AboutMe from "./content/AboutMe";
 import MyWork from "./content/MyWork";
 import Skill from "./content/Skill";
 import Contact from "./content/Contact";
+import Support from "./content/Support";
 
 const Content = (props: any) => {
   const { content, show, setShow } = useContext(AppContext);
@@ -66,6 +67,13 @@ const Content = (props: any) => {
             <div>
               <ContentTitle contentTitle={content} />
               <ContentSubject subject={Contact} />
+            </div>
+          )}
+
+          {content == "SUPPORT" && (
+            <div>
+              <ContentTitle contentTitle={content} />
+              <ContentSubject subject={Support} />
             </div>
           )}
         </div>

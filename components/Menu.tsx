@@ -47,6 +47,13 @@ const Menu = () => {
         >
           <TopicCard topicTitle="CONTACT" imagePath="/y0550.png" />
         </div>
+        <div
+          onClick={() => {
+            onTopicClick("SUPPORT");
+          }}
+        >
+          <TopicCard topicTitle="SUPPORT" imagePath="/1210.png" />
+        </div>
       </div>
     </div>
   );
