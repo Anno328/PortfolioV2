@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 function WorkCard(props: any) {
+  const { t } = useTranslation();
   return (
     <div className="my-8 shadow-2xl border-0 p-4" onClick={props.onClick}>
       <Image src={props.imgUrl} alt="logo" width={150} height={150} />
@@ -14,7 +16,7 @@ function WorkCard(props: any) {
             target="_blank"
             href={props.link}
           >
-            詳細を見る
+            {t("workCardDetail")}
           </a>
         ) : (
           <></>
@@ -28,7 +30,7 @@ function WorkCard(props: any) {
               props.onDetailClick && props.onDetailClick();
             }}
           >
-            詳細を見る
+            {t("workCardDetail")}
           </button>
         ) : null}
       </div>

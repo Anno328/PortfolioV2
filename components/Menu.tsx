@@ -25,7 +25,7 @@ const Menu = () => {
   }
 
   return (
-    <div className="bg-slate-50 w-1/3 float-left text-center static overflow-auto md:w-1/4 ">
+    <div className="bg-slate-50 w-1/4 text-center static overflow-auto md:w-1/4 h-screen flex flex-col">
       <div
         style={{
           position: "absolute",
@@ -92,9 +92,12 @@ const Menu = () => {
           jp
         </button>
       </div>
-      <Profile />
-      <div className="Topics mt-10 flex flex-col gap-4">
+      <div className="h-[15%] mt-4">
+        <Profile />
+      </div>
+      <div className="Topics h-[85%] flex flex-col gap-2 md:gap-2 min-h-0 overflow-auto justify-evenly">
         <div
+          className="flex-1 min-h-12 max-h-24"
           onClick={() => {
             onTopicClick(t("aboutMe"));
           }}
@@ -102,6 +105,7 @@ const Menu = () => {
           <TopicCard topicTitle={t("aboutMe")} imagePath="/y0530.png" />
         </div>
         <div
+          className="flex-1 min-h-12 max-h-24"
           onClick={() => {
             onTopicClick(t("myWork"));
           }}
@@ -109,6 +113,7 @@ const Menu = () => {
           <TopicCard topicTitle={t("myWork")} imagePath="/y0749.png" />
         </div>
         <div
+          className="flex-1 min-h-12 max-h-24"
           onClick={() => {
             onTopicClick(t("skills"));
           }}
@@ -116,6 +121,7 @@ const Menu = () => {
           <TopicCard topicTitle={t("skills")} imagePath="/y0682.png" />
         </div>
         <div
+          className="flex-1 min-h-12 max-h-24"
           onClick={() => {
             onTopicClick(t("contact"));
           }}
@@ -123,6 +129,7 @@ const Menu = () => {
           <TopicCard topicTitle={t("contact")} imagePath="/y0550.png" />
         </div>
         <div
+          className="flex-1 min-h-12 max-h-24"
           onClick={() => {
             onTopicClick(t("support"));
           }}

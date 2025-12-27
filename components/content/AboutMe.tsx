@@ -84,7 +84,7 @@ function AboutMe() {
                 fontSize: "0.875rem",
               }}
             >
-              LinkedInで推薦コメントを見る
+              {t("aboutMeLinkedIn")}
             </a>
           </div>
         </blockquote>

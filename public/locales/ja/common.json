@@ -138,5 +138,7 @@
   "work.blog.title": "個人ブログ",
   "work.blog.description": "ノウハウをまとめたブログを公開しています。技術的な内容を中心に執筆しています。",
   "work.corpblog.title": "企業テックブログ",
-  "work.corpblog.description": "在職中に公開したブログ記事です。技術的な内容を中心に執筆しています。"
+  "work.corpblog.description": "在職中に公開したブログ記事です。技術的な内容を中心に執筆しています。",
+  "aboutMeLinkedIn": "LinkedInで推薦コメントを見る",
+  "workCardDetail": "詳細を見る"
 }

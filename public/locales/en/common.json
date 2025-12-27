@@ -138,5 +138,7 @@
   "work.blog.title": "Personal Blog",
   "work.blog.description": "Publishing a blog summarizing know-how. Mainly writing technical content.",
   "work.corpblog.title": "Corporate Tech Blog",
-  "work.corpblog.description": "Blog articles published while employed. Mainly writing technical content."
+  "work.corpblog.description": "Blog articles published while employed. Mainly writing technical content.",
+  "aboutMeLinkedIn": "View recommendation on LinkedIn",
+  "workCardDetail": "View details"
 }

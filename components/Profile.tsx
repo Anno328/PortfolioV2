@@ -14,7 +14,7 @@ const Profile = () => {
   return (
     <div>
       <div
-        className="bg-gray-50 w-20 h-20 rounded-full mx-auto mt-12 drop-shadow-lg  md:w-16 md:h-16"
+        className="bg-gray-50 w-20 h-20 rounded-full mx-auto drop-shadow-lg  md:w-16 md:h-16"
         onClick={() => {
           onTopicClick("initial");
         }}
