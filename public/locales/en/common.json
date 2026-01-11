@@ -133,6 +133,8 @@
   "work.creative.description": "Creating visually appealing interactions in a sandbox environment using Spline, which can render 3D models on web pages, and Lottie, which enables simple animations.",
   "work.photo.title": "Photo Portfolio",
   "work.photo.description": "Publishing a portfolio of photos taken as a hobby. Tried out animations and aimed for a visually appealing site.",
+  "work.ios.title": "iOS App Development",
+  "work.ios.description": "Individually developed and published iOS apps using React Native. Multiple apps released on the App Store.",
   "work.qiita.title": "Qiita",
   "work.qiita.description": "Outputting know-how acquired on Qiita. Please follow me!",
   "work.blog.title": "Personal Blog",

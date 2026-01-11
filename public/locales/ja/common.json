@@ -133,6 +133,8 @@
   "work.creative.description": "3dモデルをWebページ上に描画できるSplineや、簡易なアニメーションを実現できるLottieを利用した見栄えのいいインタラクションをサンドボックス環境で作成している。",
   "work.photo.title": "写真ポートフォリオ",
   "work.photo.description": "趣味で撮影した写真のポートフォリオを公開しています。アニメーション部分を試行しており、見栄えの良いサイトを目指しました。",
+  "work.ios.title": "iOSアプリ開発",
+  "work.ios.description": "React Nativeを用いたiOSアプリを個人開発・公開。App Storeで複数アプリをリリースしています。",
   "work.qiita.title": "Qiita",
   "work.qiita.description": "Qiitaで習得したノウハウをアウトプットしています。Please follow me!",
   "work.blog.title": "個人ブログ",

@@ -465,6 +465,19 @@ function MyWork() {
         link="https://photo-portfolio-ryoyaanno.vercel.app/"
         imgUrl="/951.png"
       />
+      <WorkCard
+        title={t("work.ios.title")}
+        description={t("work.ios.description")}
+        link={
+          (typeof window === "undefined"
+            ? "ja"
+            : require("next-i18next").i18n?.language || navigator.language
+          ).startsWith("en")
+            ? "https://apps.apple.com/jp/developer/ryoya-anno/id1863884808?l=en-US"
+            : "https://apps.apple.com/jp/developer/ryoya-anno/id1863884808"
+        }
+        imgUrl="/1167.png"
+      />
       {/* <WorkCard
         title="WhatIPay"
         description="毎月払っているサブスクの金額を管理し可視化するサービス。Next.js、クラウド環境(Firebase)でのWebページ開発を実施。"
